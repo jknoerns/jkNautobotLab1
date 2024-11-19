@@ -1,0 +1,16 @@
+name: vJunos01
+
+topology:
+  nodes:
+    vroute1:
+      kind: juniper_vjunosrouter 
+      image: vrnetlab/juniper_vjunos-router:23.2R1.15
+      startup-config: vjunos.cfg
+
+    vroute2:
+      kind: juniper_vjunosrouter
+      image:  vrnetlab/juniper_vjunos-router:23.2R1.15
+      startup-config: vjunos.cfg
+
+  links:
+    - endpoints: ["vroute1:et-0/0/0", "vroute2:et-0/0/0"]
