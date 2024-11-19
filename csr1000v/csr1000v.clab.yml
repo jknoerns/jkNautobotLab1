@@ -1,0 +1,14 @@
+name: vCSR100v
+
+topology:
+  nodes:
+    vroute3:
+      kind: cisco_csr1000v
+      image: vrnetlab/cisco_csr1000v:16.06.06
+
+    vroute4:
+      kind: cisco_csr1000v
+      image:  vrnetlab/cisco_csr1000v:16.06.06
+
+  links:
+    - endpoints: ["vroute3:Gi2", "vroute4:Gi2"]
