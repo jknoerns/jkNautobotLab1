@@ -5,12 +5,14 @@ topology:
     vroute1:
       kind: juniper_vjunosrouter 
       image: vrnetlab/juniper_vjunos-router:23.2R1.15
-      startup-config: vjunos.cfg
+      startup-config: vroute1.cfg
 
     vroute2:
       kind: juniper_vjunosrouter
       image:  vrnetlab/juniper_vjunos-router:23.2R1.15
-      startup-config: vjunos.cfg
+      startup-config: vroute2.cfg
 
   links:
-    - endpoints: ["vroute1:et-0/0/0", "vroute2:et-0/0/0"]
+    - endpoints: ["vroute1:ge-0/0/0", "vroute2:ge-0/0/0"]
+    - endpoints: ["vroute1:ge-0/0/1", "vroute2:ge-0/0/1"]
+    - endpoints: ["vroute1:ge-0/0/2", "vroute2:ge-0/0/2"]
