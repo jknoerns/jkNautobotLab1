@@ -14,3 +14,5 @@ topology:
 
   links:
     - endpoints: ["vroute1:ge-0/0/0", "vroute2:ge-0/0/0"]
+    - endpoints: ["vroute1:ge-0/0/1", "vroute2:ge-0/0/1"]
+    - endpoints: ["vroute1:ge-0/0/2", "vroute2:ge-0/0/2"]
