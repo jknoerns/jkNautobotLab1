@@ -5,10 +5,12 @@ topology:
     vroute3:
       kind: cisco_csr1000v
       image: vrnetlab/cisco_csr1000v:16.06.06
+      startup-config: vroute3.cfg
 
     vroute4:
       kind: cisco_csr1000v
       image:  vrnetlab/cisco_csr1000v:16.06.06
-
+      startup-config: vroute4.cfg
+  
   links:
     - endpoints: ["vroute3:Gi2", "vroute4:Gi2"]
